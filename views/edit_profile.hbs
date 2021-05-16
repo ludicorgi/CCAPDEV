@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/product_profile_styles.css"/>
+    <title>Edit Profile</title>
+</head>
+<body>
+<!-- 
+	Upper Header Section 
+-->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="topNav">
+		<div class="container">
+			<div class="alignR">
+			<img class = "nav-img" src="/img/logo.png" alt="">
+			<form action="#" class="navbar-search">
+			  <input type="text" placeholder="Search" class="search-query span2">
+			</form>
+				<div class = "welcome">Welcome!</div> 
+				<a href="index.html"> Home</a> 
+				<a class="active" href="edit_profile.html">My Account</a> 
+				<a href="my_cart.html">My Cart</a>
+				<a href="register.html">Register </a> 
+				<a href="login.html"> Login</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<!--
+Lower Header Section 
+-->
+ 
+<!-- 
+Body Section 
+-->
+<div class="container">
+<div id="gototop"> </div>
+<div class="row">
+<div id="sidebar" class="span3">
+<img src="/img/logo white.png" alt="">
+<div class="well well-small">
+	<ul class="nav nav-list">
+		<li><strong>Browse by Category</strong></a></li>
+		<br>
+		<li><a href="product1.html">- Electronics</a></li>
+		<li><a href="product2.html">- Fashion</a></li>
+		<li><a href="product3.html">- Sports</a></li>
+		<li><a href="product4.html">- Home Decor</a></li>
+		<li><a href="product5.html">- Makeup</a></li>
+
+	</ul>
+</div>
+
+<div class="well well-small">
+	<ul class="nav nav-list">
+		<li><strong>Recently Searched</strong></a></li>
+		<br>
+		<li><a href="product2.html">- Fashion</a></li>
+		<li><a href="product3.html">- Sports</a></li>
+	</ul>
+</div>
+
+<div class="well well-small">
+	<ul class="nav nav-list">
+		<li><strong>Popular Searches</strong></a></li>
+		<br>
+		<li><a href="product2.html">- Fashion</a></li>
+		<li><a href="product3.html">- Sports</a></li>
+	</ul>
+</div>
+</div>
+
+<!--Product Section-->
+<h2 style="margin-left:300px;">View/Edit Profile Details</h2>
+<div class="flexbox">
+    <div class="centercontainer" style="width: 600px">
+
+    <div class="rowdiv flex-start textbanner"><h1>Personal Information</h1></div>
+
+    <div class="rowdiv"> 
+        <img class="profilepic bordered" src="https://www.w3schools.com/howto/img_avatar.png">
+        <input class="editpicbutton" type="image" name="Name of image button" src="https://cdn1.iconfinder.com/data/icons/mobile-apps-1-2/32/pen-512.png">
+    </div>
+
+    <div class="rowdiv" style="margin-left:-30px;"><h2>Tyler Gaca</h2></div>
+
+    <!--INPUT FIELDS-->
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="...">First Name : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="Tyler" name="...">
+        </form>
+    </div>
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="...">Last Name : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="Gaca" name="...">
+        </form>
+    </div>
+
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="..."> Gender : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="Male" name="...">
+        </form>
+    </div>
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="..."> Email : </label>
+            <input class="inputbox profileinput" disabled type="text" id="..." placeholder="ghosthoney@gmail.com" name="...">
+        </form>
+    </div>
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="..."> Password : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="xKk@%15Pl^" name="...">
+        </form>
+    </div>
+
+    <div class="h-spacer"></div><div class="h-spacer"></div>
+    <div class="rowdiv flex-start textbanner"><h1>Billing Details</h1></div>
+    <div class="h-spacer"></div><div class="h-spacer"></div>
+
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="...">Credit Card Number : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="5156953012440823" name="...">
+        </form>
+    </div>
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="...">Security Number : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="19356935" name="...">
+        </form>
+    </div>
+
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="..."> Expiry Date : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="27/09/2024" name="...">
+        </form>
+    </div>
+    <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="..."> Billing Address : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="1959 Twin Willow Lane, Laurinburg North Carolina" name="...">
+        </form>
+    </div>
+
+    <div class="h-spacer"></div>
+
+    <!--BUTTONS-->
+    <div class="cornerbutton">
+        <button>Edit</button>
+        <button disabled>Save</button>
+        <button>Logout</button>
+        <button>Exit</button>
+    </div>
+
+    </div>
+    </div>
+</div>
+
+<div class="h-spacer"></div>
+
+</div>
+    
+</body>
+</html>

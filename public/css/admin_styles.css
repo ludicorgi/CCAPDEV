@@ -1,0 +1,60 @@
+﻿@font-face {
+    font-family: NexaBold;
+    src: url(../fonts/Nexa\ Bold.otf);
+}
+
+@font-face {
+    font-family: NexaLight;
+    src: url(../fonts/Nexa\ Light.otf);
+}
+
+.logo {
+    height: 35px;
+}
+
+.pagename {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.navbar-custom {
+    background-color: black;
+    padding: 0;
+}
+
+.spacer {
+    margin-bottom: 10px;
+}
+
+.alignR {
+    text-align: right;
+    font-family: NexaBold;
+}
+
+.alignR a {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.alignR a:hover {
+    color: #000000;
+    background: #f89406;
+    text-decoration: none;
+}
+
+a {
+    font-family: NexaBold;
+}
+
+.welcome {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+}

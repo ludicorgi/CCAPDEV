@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/product_profile_styles.css"/>
+    <title>Add/Edit Product</title>
+</head>
+<body>
+<!-- 
+	Upper Header Section 
+-->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="topNav">
+		<div class="container">
+			<div class="alignR">
+			<img class = "nav-img" src="/img/logo.png" alt="">
+			<form action="#" class="navbar-search">
+			  <input type="text" placeholder="Search" class="search-query span2">
+			</form>
+				<div class = "welcome">Welcome!</div> 
+				<a href="index.html"> Home</a> 
+				<a href="edit_profile.html">My Account</a> 
+				<a href="my_cart.html">My Cart</a>
+				<a href="register.html">Register </a> 
+				<a href="login.html"> Login</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+ 
+<!-- 
+Body Section 
+-->
+
+<div class="flexbox">
+    <div class="centercontainer">
+        <div class="rowdiv flex-start textbanner"><h1>Edit Product Details</h1></div>
+
+        <div class="h-spacer"></div>
+        <div class="rowdiv flex-start"><h3>Item Number : XXXX</h3></div>
+
+        <!--INPUT FIELDS-->
+        <div class="rowdiv">
+            <div class="coldiv flex-start">
+                <form class="form-inline" action="/action_page.php">
+                    <label class="formlabel1" for="...">Product Name : </label>
+                    <input class="inputbox" type="text" id="..." placeholder="..." name="...">
+                </form>
+            </div>
+            <div class="coldiv flex-start">
+                <form class="form-inline" action="/action_page.php">
+                    <label class="formlabel1" for="...">Company : </label>
+                    <input class="inputbox" type="text" id="..." placeholder="..." name="...">
+                </form>
+            </div>
+        </div>
+
+        <div class="rowdiv">
+            <div class="coldiv flex-start">
+                <form class="form-inline" action="/action_page.php">
+                    <label class="formlabel1" for="...">Quantity : </label>
+                    <input class="inputbox" type="text" id="..." placeholder="..." name="...">
+                </form>
+            </div>
+            <div class="coldiv flex-start">
+                <form class="form-inline" action="/action_page.php">
+                    <label class="formlabel1" for="...">Price : </label>
+                    <input class="inputbox" type="text" id="..." placeholder="..." name="...">
+                </form>
+            </div>
+        </div>
+
+        <div class="rowdiv">
+            <div class="coldiv flex-start">
+                <form class="form-inline" action="/action_page.php">
+                    <label class="formlabel1" for="...">Tags : </label>
+                    <input class="inputbox" type="text" id="..." placeholder="..." name="...">
+                </form>
+            </div>
+            <div class="coldiv flex-start">
+                <form class="form-inline" action="/action_page.php">
+                    <label class="formlabel1" for="..." >Attach Image : </label>
+                    <input type="file" id="..." name="..." style="padding: 0px , 0px, 0px ,0px !important;">
+                </form>
+            </div>
+        </div>
+
+    
+        <div class="rowdiv flex-start form-inline formlabel1" style="font-family: NexaLight; width: 200px;">Item Description :</div>
+        <div class="rowdiv flex-start">
+            <form class="form-inline" action="/action_page.php">
+                <input class="inputbox inputlarge" type="text" id="..." placeholder="..." name="...">
+            </form>
+        </div>
+
+        <div class="h-spacer"></div>
+
+        <!--BUTTONS-->
+        <div class="cornerbutton">
+            <button>Edit</button>
+            <button disabled>Save</button>
+            <button>Exit</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

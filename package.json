@@ -1,0 +1,20 @@
+{
+  "name": "ccapdev-s15-algenio_jabanes_lojo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "hbs": "^4.1.2",
+    "mongodb": "^3.6.6",
+    "parser": "^0.1.4"
+  }
+}

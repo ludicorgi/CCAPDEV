@@ -1,0 +1,485 @@
+@font-face {
+    font-family: NexaBold;
+    src: url(../fonts/Nexa\ Bold.otf);
+}
+
+@font-face {
+    font-family: NexaLight;
+    src: url(../fonts/Nexa\ Light.otf);
+}
+
+
+button, b, h1,h2,h3{
+    font-family: NexaBold;
+}
+
+body, label, p, .normalheader{
+    font-family: NexaLight;
+}
+
+.h-spacer{
+    height: 30px;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centercontainer{
+    display: flex;
+    width: 700px;
+    height: auto;
+    flex-direction: column;
+    border: 2px solid #000000;
+}
+
+/*replace with centercontainer*/
+.midcontainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    min-height: 800px;
+}
+
+.rowdiv{
+    padding: 10px 50px 10px 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/*Removes margins on headers*/
+.rowdiv > h1,h2,h3{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*must be placed inside a rowdiv*/
+.coldiv {
+    flex: 1;
+    padding: 10px 10px 10px 10px;
+}
+
+.col-uneven{
+    flex: 3; 
+}
+
+.col-uneven:nth-of-type(even){
+    flex: 2; 
+}
+
+.textbanner{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: larger;
+}
+
+.profileheader{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 2px solid #000000;
+}
+
+.profilepic{
+    width: 200px;
+    height: 200px;
+}
+
+.editpicbutton{
+    position: relative;
+    max-width: 40px;
+    max-height: 40px;
+    bottom:0;
+    right:0;
+}
+
+.form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    font-size: 20px;
+}
+
+.formlabel1{
+    width: 150px;
+    font-size: 16px;
+}
+
+.inputbox{
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #dfdfdf;
+}
+
+.inputlarge{
+    /*TODO: change to adjust to 
+    parent container width*/
+    width: 600px; 
+    height: 250px;
+}
+
+/*added class to inputbox 
+for editprofile inputs*/
+.profileinput{
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 260px;
+    font-size: 16px;
+    height: 18px;
+}
+
+.productimg{
+    max-width: 220px;
+    max-height: 220px;
+}
+
+.productdesc{
+    height: 400px;
+    overflow: auto;
+}
+
+.cornerbutton{
+    align-self: flex-end;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.cornerbutton > button{
+    border-radius: 5px;
+    font-size: 16px;
+    width: 70px;
+    height: 40px;
+}
+  
+/*replace with cornerbutton*/
+.cornerbuttons{
+    position: absolute;
+    bottom:0;   
+    right: 0;
+    padding: 10px;
+}
+
+.cornerbuttons > button{
+    border-radius: 5px;
+    font-size: 16px;
+    width: 70px;
+    height: 40px;
+}
+
+.buybutton{
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+hr.line {
+    border-top: 3px solid rgb(131, 131, 131);
+}
+
+.flex-start{
+    justify-content: flex-start !important;
+}
+
+.bordered{
+    border: 2px solid #000000;
+}
+
+
+img {
+    width: auto\9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    font-family: NexaBold;
+    font-weight: bold;
+    line-height: 20px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+}
+
+[class*="span"] {
+    float: left;
+    min-height: 1px;
+    margin-left: 20px;
+}
+
+.page h1.format-icon:before {
+content: none;
+}
+
+.pull-right {
+    float: right;
+}
+
+.span2 {
+    width: 140px;
+}
+
+.span3 {
+    width: 220px;
+}
+
+.span4 {
+    width: 300px;
+}
+
+.span9 {
+    width: 700px;
+}
+/* Top Navigation bar */
+.navbar-fixed-top {
+    top: 0;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 0;
+}
+
+.navbar {
+    *position: relative;
+    *z-index: 2;
+    margin-bottom: 20px;
+    overflow: visible;
+}
+
+.topNav {
+    padding: 0;
+    border-bottom: 1px solid #CCC;
+    background: black;
+    box-shadow: 0 0 3px #b1afaf;
+}
+
+.topNav a:hover, .topNav a.active {
+    color: #000000;
+    background: #f89406;
+    text-decoration: none;
+}
+
+.topNav a, .welcome{
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+
+input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 126px;
+}
+
+.alignR {
+    text-align: right;
+}
+
+/* end of nav bar */
+
+/*start of search bar */
+
+.navbar-search .search-query {
+    padding: 5px 15px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    line-height: 1.5em;
+    min-width: 200px;
+	margin-top: 0.5px;
+}
+/* end of search bar */
+
+/* start of categories */
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.well-small {
+    padding: 9px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar .nav a:hover {
+    color: #f89406;
+}
+
+#sidebar .nav a {
+    color: #000;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eeeeee;
+}
+
+.nav-list > li > a {
+    padding: 3px 15px;
+	display: block;
+}
+
+.nav-list > li > a, .nav-list .nav-header {
+    margin-right: -15px;
+    margin-left: -15px;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 50%);
+}
+
+.nav-list {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+
+.nav {
+    margin-bottom: 20px;
+    margin-left: 0;
+    list-style: none;
+}
+
+a:hover, a:active {
+    outline: 0;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0 0 10px 25px;
+}
+
+/*end of categories */
+
+#header a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header h1 {
+    margin: 0;
+    line-height: 1em;
+}
+
+h1 {
+    font-size: 38.5px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar .container {
+    width: auto;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    *zoom: 1;
+}
+
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 940px;
+}
+
+.container:before, .container:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.container:after {
+    clear: both;
+}
+
+#gototop {
+    margin-top: 1px;
+}
+
+#header {
+    padding-top: 44px;
+}
+
+#header {
+    padding: 8px 0 8px;
+}
+
+.row {
+    margin-left: -20px;
+    *zoom: 1;
+}
+
+.row:before, .row:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.row:after {
+    clear: both;
+}
+
+body {
+    margin: 0;
+    font-family: NexaBold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    ms-text-size-adjust: 100%;
+}
+
+.nav-img{
+  height: 35px;
+  float:left;
+}
+
+h1, h2, h3 {
+    line-height: 40px;
+}
