@@ -6,7 +6,6 @@ const controller = {
     },
 
     getLogin: function(req, res){
-        console.log('heyy');
         res.render('login');
     }
 }
