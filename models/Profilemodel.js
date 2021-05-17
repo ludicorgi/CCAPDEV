@@ -5,7 +5,7 @@ var ProfileSchema = new mongoose.Schema({
     gender: String,
     email: String,
     password: String,
-    pictureURL: String,
+    imgURL: String,
     ccNo: Number,
     sNo: Number,
     ExpDate: Date,

@@ -18,7 +18,7 @@ const SignUpcontroller = {
             gender: "Male",
             email: "@",
             password: "...",
-            pictureURL: "https://www.w3schools.com/howto/img_avatar.png",
+            imgURL: "https://www.w3schools.com/howto/img_avatar.png",
             ccNo: "111",
             sNo: "111",
             ExpDate: "01/01/2000",
