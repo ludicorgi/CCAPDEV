@@ -1,3 +1,5 @@
+const db = require('../models/db.js');
+//const Profile = require('../models/ProfileModel.js');
 
 const SignUpcontroller = {
     getLogin: function(req, res){
@@ -10,9 +12,20 @@ const SignUpcontroller = {
 
     getMyAccount: function(req, res){
 
-        
+        var profile = {
+            fn: "First",
+            ln: "Last",
+            gender: "Male",
+            email: "@",
+            password: "...",
+            pictureURL: "https://www.w3schools.com/howto/img_avatar.png",
+            ccNo: "111",
+            sNo: "111",
+            ExpDate: "01/01/2000",
+            address: "..."
+        }
 
-        res.render('edit_profile');
+        res.render('edit_profile', profile);
     }
 }
 module.exports = SignUpcontroller;

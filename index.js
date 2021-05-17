@@ -3,7 +3,7 @@ const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require(`./routes/routes.js`);
-//const db = require(`./models/db.js`);
+const db = require(`./models/db.js`);
 const hbs = require(`hbs`);
 
 const app = express();

@@ -19,11 +19,11 @@
 			  <input type="text" placeholder="Search" class="search-query span2">
 			</form>
 				<div class = "welcome">Welcome!</div> 
-				<a href="index.html"> Home</a> 
-				<a class="active" href="edit_profile.html">My Account</a> 
-				<a href="my_cart.html">My Cart</a>
-				<a href="register.html">Register </a> 
-				<a href="login.html"> Login</a>
+				<a href="./"> Home</a> 
+				<a class="active" href="edit_profile">My Account</a> 
+				<a href="my_cart">My Cart</a>
+				<a href="register">Register </a> 
+				<a href="login"> Login</a>
 			</div>
 		</div>
 	</div>
@@ -77,7 +77,7 @@ Body Section
 </div>
 </div>
 
-<!--Product Section-->
+<!--Profile Section-->
 <h2 style="margin-left:300px;">View/Edit Profile Details</h2>
 <div class="flexbox">
     <div class="centercontainer" style="width: 600px">
@@ -85,42 +85,42 @@ Body Section
     <div class="rowdiv flex-start textbanner"><h1>Personal Information</h1></div>
 
     <div class="rowdiv"> 
-        <img class="profilepic bordered" src="https://www.w3schools.com/howto/img_avatar.png">
-        <input class="editpicbutton" type="image" name="Name of image button" src="https://cdn1.iconfinder.com/data/icons/mobile-apps-1-2/32/pen-512.png">
+        <img class="profilepic bordered" src="{{pictureURL}}">
+        <input class="editpicbutton" type="image" name="Name of image button" src="https://cdn1.iconfinder.com/data/icons/mobile-apps-1-2/32/pen-512.png" alt="edit button">
     </div>
 
-    <div class="rowdiv" style="margin-left:-30px;"><h2>Tyler Gaca</h2></div>
+    <div class="rowdiv" style="margin-left:-30px;"><h2>{{fn}} {{ln}}</h2></div>
 
     <!--INPUT FIELDS-->
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="...">First Name : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="Tyler" name="...">
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{fn}}" name="...">
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="...">Last Name : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="Gaca" name="...">
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{ln}}" name="...">
         </form>
     </div>
 
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Gender : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="Male" name="...">
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{gender}}" name="...">
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Email : </label>
-            <input class="inputbox profileinput" disabled type="text" id="..." placeholder="ghosthoney@gmail.com" name="...">
+            <input class="inputbox profileinput" disabled type="text" id="..." placeholder="{{email}}" name="...">
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Password : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="xKk@%15Pl^" name="...">
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{password}}" name="...">
         </form>
     </div>
 
@@ -131,26 +131,26 @@ Body Section
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="...">Credit Card Number : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="5156953012440823" name="...">
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{ccNo}}" name="...">
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="...">Security Number : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="19356935" name="...">
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{sNo}}" name="...">
         </form>
     </div>
 
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Expiry Date : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="27/09/2024" name="...">
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{ExpDate}}" name="...">
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Billing Address : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="1959 Twin Willow Lane, Laurinburg North Carolina" name="...">
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{address}}" name="...">
         </form>
     </div>
 
