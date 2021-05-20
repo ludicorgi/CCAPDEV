@@ -6,6 +6,8 @@ const routes = require(`./routes/routes.js`);
 const db = require(`./models/db.js`);
 const hbs = require(`hbs`);
 
+db.connect();
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.urlencoded({extended: true}))

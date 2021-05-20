@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = process.env.DB_URL;
+const url = 'mongodb://localhost:27017/ShoppingApp';
 
 const options = {
     useUnifiedTopology: true,
