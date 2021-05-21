@@ -4,6 +4,9 @@
     <meta charset="utf-8">
 	<title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
     <link href="/css/index_login_styles.css" rel="stylesheet"/>
   </head>
 <body>
@@ -87,35 +90,35 @@ Body Section
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">First Name*</label>
-					<input class="inputbox" type="text" id="..." placeholder="First Name" name="...">
+					<input class="inputbox" type="text" id="fn" placeholder="First Name" name="...">
 				</form>
 		</div>
 		
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">Last Name*</label>
-					<input class="inputbox" type="text" id="..." placeholder="Last Name" name="...">
+					<input class="inputbox" type="text" id="ln" placeholder="Last Name" name="...">
 				</form>
 		</div>
 
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">Gender*</label>
-					<input class="inputbox" type="text" id="..." placeholder="Gender" name="...">
+					<input class="inputbox" type="text" id="gender" placeholder="Gender" name="...">
 				</form>
 		</div>
 		
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">Email*</label>
-					<input class="inputbox" type="text" id="..." placeholder="Email" name="...">
+					<input class="inputbox" type="text" id="email" placeholder="Email" name="...">
 				</form>
 		</div>
 		
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">Password*</label>
-					<input class="inputbox" type="text" id="..." placeholder="Password" name="...">
+					<input class="inputbox" type="text" id="password" placeholder="Password" name="...">
 				</form>
 		</div>
 		<div class="h-spacer"></div>
@@ -133,28 +136,28 @@ Body Section
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">Credit Card Number*</label>
-					<input class="inputbox" type="text" id="..." placeholder="Credit Card Number" name="...">
+					<input class="inputbox" type="text" id="ccNo" placeholder="Credit Card Number" name="...">
 				</form>
 		</div>
 		
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">Security Number*</label>
-					<input class="inputbox" type="text" id="..." placeholder="Security Number" name="...">
+					<input class="inputbox" type="text" id="sNo" placeholder="Security Number" name="...">
 				</form>
 		</div>
 
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">Expiry Date*</label>
-					<input class="inputbox" type="text" id="..." placeholder="Credit Card Expiry Date" name="...">
+					<input class="inputbox" type="text" id="ExpDate" placeholder="Credit Card Expiry Date" name="...">
 				</form>
 		</div>
 		
 		<div class="rowdiv">
 				<form class="form-inline">
                     <label class="formlabel1" for="...">Billing Address*</label>
-					<input class="inputbox" type="text" id="..." placeholder="Billing Address" name="...">
+					<input class="inputbox" type="text" id="address" placeholder="Billing Address" name="...">
 				</form>
 		</div>
 		<div class="h-spacer"></div>
@@ -162,7 +165,8 @@ Body Section
 	</div>
 	<div class="buttondiv cornerbutton">
 	<div class="control-group">
-		<button type="submit" class="defaultBtn flex-start">Register</button>
+		<button type="submit" id="register" class="defaultBtn flex-start">Register</button>
+		<p id="error" class="error"></p>
 	</div>
 	</div>
 	</div>
