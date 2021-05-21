@@ -12,7 +12,7 @@ app.get(`/login`, SignUpcontroller.getLogin);
 
 app.get(`/register`, SignUpcontroller.getRegister);
 app.get('/regAcc', SignUpcontroller.getAddAcc);
-
+app.get('/regEmail', SignUpcontroller.getCheckEmail);
 
 app.get('/edit_profile', SignUpcontroller.getMyAccount);
 app.get('/admin', Admincontroller.getAdmin);

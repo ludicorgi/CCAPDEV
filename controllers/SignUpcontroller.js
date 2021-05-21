@@ -53,5 +53,13 @@ const SignUpcontroller = {
         }
         db.insertOne(Profile, profile, function(){});
     },
+
+    getCheckEmail: function(req, res) {
+        var email = req.query.email;
+
+        Profile.findOne({email: email}, function (err, result){
+            res.send(result);
+        });
+    },
 }
 module.exports = SignUpcontroller;

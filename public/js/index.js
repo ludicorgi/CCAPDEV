@@ -19,4 +19,18 @@ $(document).ready(function () {
             $('#error').text('Registered successfully');
         }
     });
+
+    $('#email').keyup(function () {
+        var email = $('#email').val();
+
+        $.get('/regEmail', {email : email}, function(result){
+            if(result.email == email){
+                $('#error').text('email already in use');
+                $('#email').css('background-color', '#e36363');
+            }
+            else{
+                $('#email').css('background-color', '#dfdfdf');
+            }
+        });
+    });
 });
