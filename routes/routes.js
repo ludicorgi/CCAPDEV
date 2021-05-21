@@ -9,6 +9,7 @@ const app = express();
 
 app.get(`/`, controller.getIndex);
 app.get(`/login`, SignUpcontroller.getLogin);
+app.get('/logAcc', SignUpcontroller.getLogAcc);
 
 app.get(`/register`, SignUpcontroller.getRegister);
 app.get('/regAcc', SignUpcontroller.getAddAcc);

@@ -6,26 +6,17 @@ const SignUpcontroller = {
         res.render('login');
     },
 
-    getRegister: function(req, res){
-        res.render('register');
+    getLogAcc: function(req, res){
+        var email = req.query.email;
+        var password = req.query.password;
+
+        Profile.findOne({email: email, password: password}, function (err, result){
+            res.send(result);
+        });
     },
 
-    getMyAccount: function(req, res){
-
-        var profile = {
-            fn: "First",
-            ln: "Last",
-            gender: "Male",
-            email: "@",
-            password: "...",
-            imgURL: "https://www.w3schools.com/howto/img_avatar.png",
-            ccNo: "111",
-            sNo: "111",
-            ExpDate: "01/01/2000",
-            address: "..."
-        }
-
-        res.render('edit_profile', profile);
+    getRegister: function(req, res){
+        res.render('register');
     },
 
     getAddAcc: function(req, res) {
@@ -60,6 +51,24 @@ const SignUpcontroller = {
         Profile.findOne({email: email}, function (err, result){
             res.send(result);
         });
+    },
+
+    getMyAccount: function(req, res){
+
+        var profile = {
+            fn: "First",
+            ln: "Last",
+            gender: "Male",
+            email: "@",
+            password: "...",
+            imgURL: "https://www.w3schools.com/howto/img_avatar.png",
+            ccNo: "111",
+            sNo: "111",
+            ExpDate: "01/01/2000",
+            address: "..."
+        }
+
+        res.render('edit_profile', profile);
     },
 }
 module.exports = SignUpcontroller;
