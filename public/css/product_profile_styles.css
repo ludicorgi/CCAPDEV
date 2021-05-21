@@ -21,6 +21,10 @@ body, label, p, .normalheader{
     height: 30px;
 }
 
+.error{
+    color: rgb(138, 45, 45);
+}
+
 .flexbox{
     display: flex;
     justify-content: center;

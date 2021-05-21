@@ -12,6 +12,10 @@
     height: 35px;
 }
 
+.error{
+    color: rgb(138, 45, 45);
+}
+
 .pagename {
     color: #fff;
     font-size: 12px;
