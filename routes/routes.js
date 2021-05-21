@@ -13,6 +13,7 @@ app.get(`/register`, SignUpcontroller.getRegister);
 app.get('/edit_profile', SignUpcontroller.getMyAccount);
 app.get('/admin', Admincontroller.getAdmin);
 app.get('/my_cart', Shopcontroller.getMyCart);
+app.get('/view_product', Shopcontroller.getProduct);
 
 
 module.exports = app;
