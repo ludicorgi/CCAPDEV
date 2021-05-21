@@ -53,7 +53,7 @@ const SignUpcontroller = {
         });
     },
 
-    getMyAccount: function(req, res){
+    getEditProfile: function(req, res){
 
         var profile = {
             fn: "First",
