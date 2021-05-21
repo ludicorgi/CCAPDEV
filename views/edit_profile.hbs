@@ -86,7 +86,6 @@ Body Section
 
     <div class="rowdiv"> 
         <img class="profilepic bordered" src="{{imgURL}}">
-        <input class="editpicbutton" type="image" name="Name of image button" src="https://cdn1.iconfinder.com/data/icons/mobile-apps-1-2/32/pen-512.png" alt="edit button">
     </div>
 
     <div class="rowdiv" style="margin-left:-30px;"><h2>{{fn}} {{ln}}</h2></div>
@@ -121,6 +120,12 @@ Body Section
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Password : </label>
             <input class="inputbox profileinput" type="text" id="..." placeholder="{{password}}" name="...">
+        </form>
+    </div>
+        <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="..."> Display Img URL : </label>
+            <input class="inputbox profileinput" type="text" id="..." placeholder="{{imgURL}}" name="...">
         </form>
     </div>
 
