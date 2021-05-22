@@ -9,10 +9,8 @@ $(document).ready(function () {
         }
         else{
             $.get('/logAcc', {email:email, password:password}, function(result){
-                console.log(result.email + email);
-
                 if(result.email != undefined)
-                    $('#error').text("Logged in successfully");
+                    window.location.assign('/');
                 else $('#error').text("Invalid credentials");
             });
         }
