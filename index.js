@@ -30,10 +30,9 @@ app.set(`view engine`, `hbs`);
 hbs.registerPartials(__dirname + `/views/partials`);
 
 app.use(express.static('public'));
-app.use(`/`, routes);
+
 
 app.use(session({
-    key: 'user_sid',
     secret: 'secret-key',
     resave: false,
     saveUninitialized: false,
@@ -49,6 +48,7 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use(`/`, routes);
 app.listen(port, hostname, function(){
     console.log(`Server running at:`);
     console.log(`http://` + hostname + `:` + port);

@@ -16,6 +16,9 @@ app.get('/regAcc', SignUpcontroller.getAddAcc);
 app.get('/regEmail', SignUpcontroller.getCheckEmail);
 
 app.get('/edit_profile', SignUpcontroller.getEditProfile);
+app.get('/editdetails', SignUpcontroller.getEditDetails);
+app.get('/logout', SignUpcontroller.Logout);
+
 app.get('/admin', Admincontroller.getAdmin);
 app.get('/my_cart', Shopcontroller.getMyCart);
 app.get('/view_product', Shopcontroller.getProduct);
