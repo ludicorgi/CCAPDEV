@@ -27,9 +27,11 @@ $(document).ready(function () {
             if(result.email == email){
                 $('#error').text('email already in use');
                 $('#email').css('background-color', '#e36363');
+                $("#register").prop('disabled', true);
             }
             else{
                 $('#email').css('background-color', '#dfdfdf');
+                $("#register").prop('disabled', false);
             }
         });
     });
