@@ -1,15 +1,17 @@
-const mongoose = require('mongoose');
-const url = 'mongodb://localhost:27017/ShoppingApp';
+const mongoose = require('mongoose')
+const ProductModel = require('./Productmodel.js');
+const url = `mongodb+srv://j3jabanes:xg1BaBofpQLUeUUG@cstore.wg8v7.mongodb.net/CSTORE?retryWrites=true&w=majority`;
 
-const options = {
-    useUnifiedTopology: true,
-    useNewUrlParser: true
-};
+const connectionParams={
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true 
+}
 
 const database = {
 
     connect: function () {
-        mongoose.connect(url, options, function(error) {
+        mongoose.connect(url,connectionParams, function(error) {
             if(error) throw error;
             console.log('Connected to: ' + url);
         });
