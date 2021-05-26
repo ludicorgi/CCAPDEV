@@ -51,6 +51,10 @@ body, label, p, .normalheader{
     min-height: 800px;
 }
 
+.rowdiv_nopad{
+    padding: 0px 50px 0px 50px !important;
+}
+
 .rowdiv{
     padding: 10px 50px 10px 50px;
     height: auto;
@@ -119,6 +123,13 @@ body, label, p, .normalheader{
     font-size: 16px;
 }
 
+.inputnum{
+    border-radius: 5px;
+    width: 30px;
+    background-color: #dfdfdf;
+    margin-left: 10px;
+}
+
 .inputbox{
     border-radius: 5px;
     height: 25px;
@@ -128,8 +139,6 @@ body, label, p, .normalheader{
 }
 
 .inputlarge{
-    /*TODO: change to adjust to 
-    parent container width*/
     width: 600px; 
     height: 250px;
 }
@@ -154,6 +163,17 @@ for editprofile inputs*/
     overflow: auto;
 }
 
+.commentbuttons{
+    justify-content: flex-end !important;
+}
+
+.commentbuttons > button{
+    border-radius: 5px;
+    background-color: #cfcfcf;
+    border-color: #cfcfcf;
+}
+
+/*obsolete*/
 .cornerbutton{
     align-self: flex-end;
     padding-right: 5px;
