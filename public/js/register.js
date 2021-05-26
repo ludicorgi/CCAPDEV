@@ -17,6 +17,15 @@ $(document).ready(function () {
         else{
             $.get('/regAcc', {fn:fn, ln:ln, gender:gender, email:email, password:password, ccNo:ccNo, sNo:sNo, ExpDate:ExpDate, address:address}, function(result){});
             $('#error').text('Registered successfully');
+            $('#fn').val("");
+            $('#ln').val("");
+            $('#gender').val("");
+            $('#email').val("");
+            $('#password').val("");
+            $('#ccNo').val("");
+            $('#sNo').val("");
+            $('#ExpDate').val("");
+            $('#address').val("");
         }
     });
 
@@ -32,6 +41,7 @@ $(document).ready(function () {
             else{
                 $('#email').css('background-color', '#dfdfdf');
                 $("#register").prop('disabled', false);
+                $('#error').text('');
             }
         });
     });
