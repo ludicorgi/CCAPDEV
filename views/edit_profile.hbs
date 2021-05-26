@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/edit_profile.js"></script>
     <link rel="stylesheet" href="/css/product_profile_styles.css"/>
     <title>{{fn}} {{ln}}</title>
 </head>
@@ -86,41 +88,46 @@ Body Section
 
     <div class="rowdiv"> 
         <img class="profilepic bordered" src="{{imgURL}}">
-        <input class="editpicbutton" type="image" name="Name of image button" src="https://cdn1.iconfinder.com/data/icons/mobile-apps-1-2/32/pen-512.png" alt="edit button">
     </div>
 
     <div class="rowdiv" style="margin-left:-30px;"><h2>{{fn}} {{ln}}</h2></div>
 
     <!--INPUT FIELDS-->
     <div class="rowdiv flex-start">
-        <form class="form-inline" action="/action_page.php">
+        <form class="form-inline">
             <label class="formlabel1" for="...">First Name : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="{{fn}}" name="...">
+            <input class="inputbox profileinput" type="text" id="fn" placeholder="{{fn}}" name="..." disabled>
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="...">Last Name : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="{{ln}}" name="...">
+            <input class="inputbox profileinput" type="text" id="ln" placeholder="{{ln}}" name="..." disabled>
         </form>
     </div>
 
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Gender : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="{{gender}}" name="...">
+            <input class="inputbox profileinput" type="text" id="gender" placeholder="{{gender}}" name="..." disabled>
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Email : </label>
-            <input class="inputbox profileinput" disabled type="text" id="..." placeholder="{{email}}" name="...">
+            <input class="inputbox profileinput" disabled type="text" id="email" placeholder="{{email}}" name="..." disabled>
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Password : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="{{password}}" name="...">
+            <input class="inputbox profileinput" type="text" id="password" placeholder="{{password}}" name="..." disabled>
+        </form>
+    </div>
+        <div class="rowdiv flex-start">
+        <form class="form-inline" action="/action_page.php">
+            <label class="formlabel1" for="..."> Display Img URL : </label>
+            <input class="inputbox profileinput" type="text" id="imgURL" placeholder="{{imgURL}}" name="..." disabled>
         </form>
     </div>
 
@@ -131,26 +138,26 @@ Body Section
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="...">Credit Card Number : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="{{ccNo}}" name="...">
+            <input class="inputbox profileinput" type="text" id="ccNo" placeholder="{{ccNo}}" name="..." disabled>
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="...">Security Number : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="{{sNo}}" name="...">
+            <input class="inputbox profileinput" type="text" id="sNo" placeholder="{{sNo}}" name="..." disabled>
         </form>
     </div>
 
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Expiry Date : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="{{ExpDate}}" name="...">
+            <input class="inputbox profileinput" type="text" id="ExpDate" placeholder="{{ExpDate}}" name="..." disabled>
         </form>
     </div>
     <div class="rowdiv flex-start">
         <form class="form-inline" action="/action_page.php">
             <label class="formlabel1" for="..."> Billing Address : </label>
-            <input class="inputbox profileinput" type="text" id="..." placeholder="{{address}}" name="...">
+            <input class="inputbox profileinput" type="text" id="address" placeholder="{{address}}" name="..." disabled>
         </form>
     </div>
 
@@ -158,10 +165,10 @@ Body Section
 
     <!--BUTTONS-->
     <div class="cornerbutton">
-        <button>Edit</button>
-        <button disabled>Save</button>
-        <button>Logout</button>
-        <button>Exit</button>
+        <button id="edit">Edit</button>
+        <button id="save" disabled>Save</button>
+        <button id="logout"><a href="/logout">Logout</a></button>
+        <button><a href="./">Exit</a></button>
     </div>
 
     </div>
