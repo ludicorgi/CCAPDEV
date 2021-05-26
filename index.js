@@ -26,8 +26,6 @@ const store = new mongoStore({
     collection: 'session'
 });
 
-db.connect();
-
 app.set(`view engine`, `hbs`);
 hbs.registerPartials(__dirname + `/views/partials`);
 
