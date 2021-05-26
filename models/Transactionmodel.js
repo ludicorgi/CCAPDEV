@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
-const Product = require('ProductModel.js');
+var Products = require('./Productmodel.js');
 
 var TransactionSchema = new mongoose.Schema({
     user: String,
     num : Number,
-    products: [Product] 
+    products: [Products.schema] 
 });
 
 module.exports = mongoose.model('Transaction', TransactionSchema);
