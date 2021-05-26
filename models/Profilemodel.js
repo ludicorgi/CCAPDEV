@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Transaction = require('./Transactionmodel.js');
+var Transaction = require('Transactionmodel.js');
 
 var ProfileSchema = new mongoose.Schema({
     fn: String,
