@@ -29,7 +29,4 @@ app.get('/view_product', Shopcontroller.getProduct);
 // Admin
 app.get('/admin', Admincontroller.getAdmin);
 
-// Products
-app.get('/products', Productcontroller.getProduct);
-
 module.exports = app;
