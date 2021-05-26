@@ -10,7 +10,7 @@ var ProductSchema = new mongoose.Schema({
     itemNo: Number,
     name: String,
     company: String,
-    Quantity: String,
+    Quantity: Number,
     Price: Number,
     tags: [String],
     imgURL: String,
