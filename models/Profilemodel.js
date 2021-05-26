@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Transaction = require('Transactionmodel.js');
+var Transaction = require('./Transactionmodel.js');
 
 var ProfileSchema = new mongoose.Schema({
     fn: String,
@@ -12,7 +12,7 @@ var ProfileSchema = new mongoose.Schema({
     sNo: Number,
     ExpDate: Date,
     address: String,
-    cart: [Transaction]
+    cart: [Transaction.schema]
 });
 
 module.exports = mongoose.model('Profile', ProfileSchema);
