@@ -10,4 +10,4 @@ var ProductSchema = new mongoose.Schema({
     itemDesc: String,
 });
 
-module.exports = mongoose.model('Product', ProductSchema);
+module.exports = mongoose.model('Products', ProductSchema);
