@@ -1,6 +1,6 @@
 const db = require('../models/db.js');
 const Profile = require('../models/ProfileModel.js');
-const { render } = require('../routes/routes.js');
+const render = require('../routes/routes.js');
 
 const SignUpcontroller = {
     getLogin: function(req, res){
