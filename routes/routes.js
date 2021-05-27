@@ -9,6 +9,7 @@ const app = express();
 
 // index
 app.get(`/`, controller.getIndex);
+app.get('/session', controller.getSession);
 
 // Signup
 app.get(`/login`, SignUpcontroller.getLogin);
