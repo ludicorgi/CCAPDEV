@@ -22,11 +22,14 @@ app.get('/edit_profile', SignUpcontroller.getEditProfile);
 app.get('/editdetails', SignUpcontroller.getEditDetails);
 app.get('/logout', SignUpcontroller.Logout);
 
-app.get('/admin', Admincontroller.getAdmin);
 app.get('/my_cart', Shopcontroller.getMyCart);
 app.get('/view_product', Shopcontroller.getProduct);
 
 // Admin
 app.get('/admin', Admincontroller.getAdmin);
+app.get('/checkitemno', Admincontroller.getCheckItemNo);
+app.get('/addprod', Admincontroller.getAddProd);
+app.get('/editprod', Admincontroller.getEditProd);
+app.get('/delprod', Admincontroller.getDelProd);
 
 module.exports = app;
