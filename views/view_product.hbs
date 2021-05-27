@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/view_product.js"></script>
     <link rel="stylesheet" href="/css/product_profile_styles.css"/>
     <title>{{name}}</title>
 </head>
@@ -87,7 +90,7 @@ Body Section
             <div class="coldiv flex-start">
                 <img class="productimg bordered" src="{{imgURL}}"><br>
                 <hr class="line">
-                <button class="buybutton">Add to Cart</button> P{{Price}} <br>
+                <button id="buy" class="buybutton">Add to Cart</button> P{{Price}} <br>
                 Rating : {{rating}}/5 <br>
 
                 <p class="bottomtext"><b>Tagged Under :</b>{{#each tags}} {{ this }} {{/each}}</p>
@@ -106,19 +109,21 @@ Body Section
 			<!--Comment input Section-->
 			<div class="bordered">
 				<div class="rowdiv rowdiv_nopad flex-start">Add a comment : </div>
-				<div class="rowdiv rowdiv_nopad flex-start"> Rating : <input class="inputnum" type="number" id="rating"></div>
+				<div class="rowdiv rowdiv_nopad flex-start"> Rating : <input class="inputnum" type="number" id="rating" value=""></div>
 				<div class="rowdiv rowdiv_nopad"><input class="inputbox" type="text" id="comment"></div>
-				<div class="rowdiv rowdiv_nopad commentbuttons">
+				<div id="commentbuttons" class="rowdiv rowdiv_nopad commentbuttons">
 					<div class="error"></div>
-					<button id="cancel">Cancel</button>
 					<button id="send">Send</button>
     			</div>
 			</div>
-        <div class="rowdiv flex-start bordered">
-            <p><b>Username</b> <br> 
-            <u>Rating : 4/5.</u> Consectetur adipiscing elit duis tristique. Molestie nunc non blandit massa enim nec dui. Ultricies lacus sed turpis tincidunt id aliquet. Est placerat in 
-            egestas erat imperdiet sed euismod nisi. Tincidunt tortor aliquam nulla facilisi cras.</p>
-        </div>
+		<div id="comment_sec">
+			<div class="rowdiv flex-start bordered">
+				<p><b>Username</b> <br> 
+				<u>Rating : 4/5.</u> Consectetur adipiscing elit duis tristique. Molestie nunc non blandit massa enim nec dui. Ultricies lacus sed turpis tincidunt id aliquet. Est placerat in 
+				egestas erat imperdiet sed euismod nisi. Tincidunt tortor aliquam nulla facilisi cras.</p>
+			</div>
+		</div>
+        
     </div>
     </div>
 </div>
