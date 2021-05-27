@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const ProductModel = require('./Productmodel.js');
 const url = `mongodb+srv://j3jabanes:xg1BaBofpQLUeUUG@cstore.wg8v7.mongodb.net/CSTORE?retryWrites=true&w=majority`;
 
 const connectionParams={
