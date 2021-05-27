@@ -117,11 +117,9 @@ Body Section
     			</div>
 			</div>
 		<div id="comment_sec">
-			<div class="rowdiv flex-start bordered">
-				<p><b>Username</b> <br> 
-				<u>Rating : 4/5.</u> Consectetur adipiscing elit duis tristique. Molestie nunc non blandit massa enim nec dui. Ultricies lacus sed turpis tincidunt id aliquet. Est placerat in 
-				egestas erat imperdiet sed euismod nisi. Tincidunt tortor aliquam nulla facilisi cras.</p>
-			</div>
+		{{#each result.reviews}}
+			{{> review}}
+		{{/each}}
 		</div>
         
     </div>
