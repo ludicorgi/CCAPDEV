@@ -1,5 +1,5 @@
 const db = require('../models/db.js');
-//const Product = require('../models/ProductModel.js');
+//const Product = require('../models/Productmodel.js');
 
 const Shopcontroller = {
     getMyCart: function(req, res){

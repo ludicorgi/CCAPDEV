@@ -1,4 +1,4 @@
-const Profile = require('../models/ProfileModel.js');
+const Profile = require('../models/Profilemodel.js');
 
 const controller = {
     getIndex: function(req, res) {

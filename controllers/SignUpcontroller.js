@@ -1,5 +1,5 @@
 const db = require('../models/db.js');
-const Profile = require('../models/ProfileModel.js');
+const Profile = require('../models/Profilemodel.js');
 const render = require('../routes/routes.js');
 
 const SignUpcontroller = {
