@@ -163,6 +163,10 @@ for editprofile inputs*/
     overflow: auto;
 }
 
+.productdesc > p{
+    word-wrap: break-word;
+}
+
 .commentbuttons{
     justify-content: flex-end !important;
 }
