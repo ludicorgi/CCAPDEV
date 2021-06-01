@@ -12,3 +12,4 @@ Checkout
 View Inventory
 Edit Inventory
 Reviews
+Password hashing
