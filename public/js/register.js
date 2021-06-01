@@ -14,6 +14,9 @@ $(document).ready(function () {
         if(fn == "" | ln == "" | gender == "" | email == "" | password == "" | ccNo == "" | sNo == "" | ExpDate == "" | address == ""){
             $('#error').text('Fill up all fields');
         }
+        else if(!($.isNumeric(ccNo)) ||  !($.isNumeric(sNo))){
+            $('#error').text('Credit Card and Security Number must be valid numerals');
+        }
         else{
             $.get('/regAcc', {fn:fn, ln:ln, gender:gender, email:email, password:password, ccNo:ccNo, sNo:sNo, ExpDate:ExpDate, address:address}, function(result){});
             $('#error').text('Registered successfully');
