@@ -2,6 +2,9 @@ const db = require('../models/db.js');
 const Profile = require('../models/Profilemodel.js');
 const render = require('../routes/routes.js');
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 const SignUpcontroller = {
     getLogin: function(req, res){
         res.render('login');
@@ -12,10 +15,15 @@ const SignUpcontroller = {
         var password = req.query.password;
         var ss = req.session;
 
-        Profile.findOne({email: email, password: password}, function (err, result){
-            if(result != undefined)
-                ss.email = result.email;
-            res.send(result);
+        Profile.findOne({email: email}, function (err, result){
+            if(result != undefined){
+                bcrypt.compare(password, result.password, function(err, result2) {
+                    if (result2 != undefined){
+                        ss.email = result.email;
+                        res.send(result);
+                    }
+                });
+            }
         });
     },
 
@@ -34,19 +42,22 @@ const SignUpcontroller = {
         var ExpDate = req.query.ExpDate;
         var address = req.query.address;
 
-        var profile = {
-            fn:fn, 
-            ln:ln, 
-            gender:gender,
-            email:email, 
-            password:password, 
-            ccNo:ccNo, sNo:sNo, 
-            ExpDate:ExpDate, 
-            address:address,
-
-            imgURL:"https://www.w3schools.com/howto/img_avatar.png",
-        }
-        db.insertOne(Profile, profile, function(){});
+        bcrypt.genSalt(saltRounds, (err, salt) => {
+            bcrypt.hash(password, salt, (err, hash) => {
+                var profile = {
+                    fn:fn, 
+                    ln:ln, 
+                    gender:gender,
+                    email:email, 
+                    password:hash, 
+                    ccNo:ccNo, sNo:sNo, 
+                    ExpDate:ExpDate, 
+                    address:address,
+                    imgURL:"https://www.w3schools.com/howto/img_avatar.png",
+                } 
+                db.insertOne(Profile, profile, function(){});
+            });
+        });
     },
 
     getCheckEmail: function(req, res) {
@@ -68,7 +79,6 @@ const SignUpcontroller = {
                 ln: result.ln,
                 gender: result.gender,
                 email: result.email,
-                password: result.password,
                 imgURL: result.imgURL,
                 ccNo: result.ccNo,
                 sNo: result.sNo,
@@ -88,7 +98,6 @@ const SignUpcontroller = {
             fn: req.query.fn,
             ln: req.query.ln,
             gender: req.query.gender,
-            password: req.query.password,
             ccNo: req.query.ccNo,
             sNo: req.query.sNo,
             ExpDate: req.query.ExpDate,

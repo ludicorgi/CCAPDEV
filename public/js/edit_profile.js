@@ -10,12 +10,11 @@ $(document).ready(function () {
         $('.inputbox').prop('disabled', true);
         $('#save').prop('disabled', true);
 
-        var fn,ln,gender,password,ccNo,ExpDate,address,imgURL;
+        var fn,ln,gender,ccNo,ExpDate,address,imgURL;
 
         if ($('#fn').val() == "")
            fn = $('#fn').attr('placeholder');
         else fn = $('#fn').val();
-
         
         if ($('#ln').val() == "")
             ln = $('#ln').attr('placeholder');
@@ -24,10 +23,6 @@ $(document).ready(function () {
         if ($('#gender').val() == "")
            gender = $('#gender').attr('placeholder');
         else gender = $('#gender').val();
-
-        if ($('#password').val() == "")
-           password = $('#password').attr('placeholder');
-        else password = $('#password').val();
 
         if ($('#ccNo').val() == "")
            ccNo = $('#ccNo').attr('placeholder');
@@ -49,7 +44,7 @@ $(document).ready(function () {
             imgURL = $('#imgURL').attr('placeholder');
         else imgURL = $('#imgURL').val();
 
-        $.get('/editdetails',{fn:fn, ln:ln, gender:gender, password: password, ccNo: ccNo, sNo: sNo, ExpDate:ExpDate, address:address, imgURL: imgURL}, function(){});
+        $.get('/editdetails',{fn:fn, ln:ln, gender:gender, ccNo: ccNo, sNo: sNo, ExpDate:ExpDate, address:address, imgURL: imgURL}, function(){});
         $('body').load('/edit_profile');
     });
 });
