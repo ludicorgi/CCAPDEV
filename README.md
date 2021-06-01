@@ -5,11 +5,11 @@ Features cut:
 Track orders
 
 Features not included in the ZIP:
-Search Product
-Add to Cart
-View Products
-Checkout
-View Inventory
-Edit Inventory
-Reviews
+Search Product,
+Add to Cart,
+View Products,
+Checkout,
+View Inventory,
+Edit Inventory,
+Reviews,
 Password hashing
