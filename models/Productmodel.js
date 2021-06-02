@@ -7,15 +7,15 @@ var reviewSchema = new mongoose.Schema({
 });
 
 var ProductSchema = new mongoose.Schema({
-    itemNo: Number,
-    name: String,
-    company: String,
-    Quantity: Number,
-    Price: Number,
+    itemNo: {type: Number, require: true},
+    name: {type: String, require: true},
+    company: {type: String, require: false},
+    Quantity: {type: Number, require: true},
+    Price: {type: Number, require: true},
     tags: [String],
-    imgURL: String,
-    itemDesc: String,
-    rating: Number,
+    imgURL: {type: String, require: false},
+    itemDesc: {type: String, require: false},
+    rating: {type: Number, require: false},
     reviews: [reviewSchema]
 });
 
