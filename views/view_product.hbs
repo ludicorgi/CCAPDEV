@@ -18,8 +18,8 @@
 		<div class="container">
 			<div class="alignR">
 			<img class = "nav-img" src="/img/logo.png" alt="">
-			<form action="#" class="navbar-search">
-			  <input type="text" placeholder="Search" class="search-query span2">
+			<form method='GET' action="/searchresults" class="navbar-search">
+			  <input type="text" name='tags' placeholder="Search" class="search-query span2">
 			</form>
 				<div class = "welcome">Welcome!</div> 
 				<a href="./"> Home</a> 
@@ -52,11 +52,12 @@ Body Section
 	<ul class="nav nav-list">
 		<li><strong>Browse by Category</strong></a></li>
 		<br>
-		<li><a href="product1.html">- Electronics</a></li>
-		<li><a href="product2.html">- Fashion</a></li>
-		<li><a href="product3.html">- Sports</a></li>
-		<li><a href="product4.html">- Home Decor</a></li>
-		<li><a href="product5.html">- Makeup</a></li>
+		<li><a href='/searchproducts'>- All Products</a></li>
+		<li><a href='/searchproducts?tags=electronics'>- Electronics</a></li>
+		<li><a href='/searchproducts?tags=fashion'>- Fashion</a></li>
+		<li><a href='/searchproducts?tags=sports'>- Sports</a></li>
+		<li><a href='/searchproducts?tags=home decor'>- Home Decor</a></li>
+		<li><a href='/searchproducts?tags=makeup'>- Makeup</a></li>
 
 	</ul>
 </div>
@@ -65,8 +66,8 @@ Body Section
 	<ul class="nav nav-list">
 		<li><strong>Recently Searched</strong></a></li>
 		<br>
-		<li><a href="product2.html">- Fashion</a></li>
-		<li><a href="product3.html">- Sports</a></li>
+		<li><a href='/searchproducts?tags=fashion'>- Fashion</a></li>
+		<li><a href='/searchproducts?tags=sports'>- Sports</a></li>
 	</ul>
 </div>
 
@@ -74,8 +75,8 @@ Body Section
 	<ul class="nav nav-list">
 		<li><strong>Popular Searches</strong></a></li>
 		<br>
-		<li><a href="product2.html">- Fashion</a></li>
-		<li><a href="product3.html">- Sports</a></li>
+		<li><a href='/searchproducts?tags=fashion'>- Fashion</a></li>
+		<li><a href='/searchproducts?tags=sports'>- Sports</a></li>
 	</ul>
 </div>
 </div>
