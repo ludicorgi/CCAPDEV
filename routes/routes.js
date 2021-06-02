@@ -4,6 +4,7 @@ const controller = require(`../controllers/controller.js`);
 const SignUpcontroller = require(`../controllers/SignUpcontroller.js`);
 const Admincontroller = require(`../controllers/Admincontroller.js`);
 const Shopcontroller = require("../controllers/Shopcontroller.js");
+const Searchcontroller = require("../controllers/Searchcontroller.js");
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.get('/edit_profile', SignUpcontroller.getEditProfile);
 app.get('/editdetails', SignUpcontroller.getEditDetails);
 app.get('/logout', SignUpcontroller.Logout);
 
+//Shop
 app.get('/my_cart', Shopcontroller.getMyCart);
 app.get('/view_product', Shopcontroller.getProduct);
 
@@ -34,4 +36,7 @@ app.get('/addprod', Admincontroller.getAddProd);
 app.get('/editprod', Admincontroller.getEditProd);
 app.get('/delprod', Admincontroller.getDelProd);
 
+//Search
+app.get('/searchproducts', Searchcontroller.getCategory);
+app.get('/searchresults', Searchcontroller.getSearch);
 module.exports = app;
