@@ -30,9 +30,23 @@ const Shopcontroller = {
             email: req.query.email,
             rating: req.query.rating,
             desc: req.query.comment
-        };
-        console.log("111");
-        db.updateOne(Products, {itemNo: itemNo},  { $pull:{reviews: {$in: review}} }, function(){});
+        }; 
+
+        Products.findOne({itemNo: itemNo}, function(err, result){
+            var arr = result.reviews;
+            
+            arr.forEach(function(item){
+                var user = item.user;
+                var email = item.email;
+                var rating = item.rating;
+                var desc = item.desc;
+                var id = item._id;
+                
+                if(user == req.query.user && email == req.query.email && rating == req.query.rating && desc == req.query.comment ){
+                    db.updateOne(Products, {itemNo: itemNo},  { $pull:{reviews: {_id: id}} }, function(){});
+                }
+            });
+        });
     }
 }
 module.exports = Shopcontroller;
