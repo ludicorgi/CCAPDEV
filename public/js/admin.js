@@ -47,6 +47,7 @@ $(document).ready(function () {
             $('#msg').text('Product is successfully added!'); 
 
             console.log('Success');
+            $('body').load('/admin');
         }
 
     });
@@ -81,6 +82,7 @@ $(document).ready(function () {
             $('#msg').text('Product is successfully edited!');
 
             console.log('Success');
+            $('body').load('/admin');
         }
     });
 
