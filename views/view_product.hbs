@@ -92,7 +92,6 @@ Body Section
                 <img class="productimg bordered" src="/img/{{imgURL}}"><br>
                 <hr class="line">
                 <button id="buy" class="buybutton">Add to Cart</button> P{{Price}} <br>
-                Rating : {{rating}}/5 <br>
 
                 <p class="bottomtext"><b>Tagged Under :</b>{{#each tags}} {{ this }} {{/each}}</p>
             </div>
@@ -118,7 +117,7 @@ Body Section
     			</div>
 			</div>
 		<div id="comment_sec">
-		{{#each result.reviews}}
+		{{#each reviews}}
 			{{> review}}
 		{{/each}}
 		</div>
