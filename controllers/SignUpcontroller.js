@@ -18,7 +18,9 @@ const SignUpcontroller = {
         Profile.findOne({email: email}, function (err, result){
             if(result != undefined){
                 bcrypt.compare(password, result.password, function(err, result2) {
-                    if (result2 != undefined){
+                    if (!result2)
+                        res.send(undefined)
+                    else{
                         ss.email = result.email;
                         res.send(result);
                     }
