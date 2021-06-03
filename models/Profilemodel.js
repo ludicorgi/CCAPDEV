@@ -12,7 +12,10 @@ var ProfileSchema = new mongoose.Schema({
     sNo: Number,
     ExpDate: Date,
     address: String,
-    cart: [Transaction.schema]
+    cart: [{
+        product: Number,
+        quantity: {type: Number, require: true },
+    }],
 });
 
 module.exports = mongoose.model('Profile', ProfileSchema);
