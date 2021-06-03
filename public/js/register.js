@@ -11,8 +11,19 @@ $(document).ready(function () {
         var ExpDate = $('#ExpDate').val();
         var address = $('#address').val();
 
+        //email validation
+        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        var valid;
+        if (filter.test(email)) 
+            valid = true;
+        else valid = false;
+        
+
         if(fn == "" | ln == "" | gender == "" | email == "" | password == "" | ccNo == "" | sNo == "" | ExpDate == "" | address == ""){
             $('#error').text('Fill up all fields');
+        }
+        else if(!valid){
+            $('#error').text('Enter Valid Email');
         }
         else if(!($.isNumeric(ccNo)) ||  !($.isNumeric(sNo))){
             $('#error').text('Credit Card and Security Number must be valid numerals');
@@ -37,7 +48,7 @@ $(document).ready(function () {
 
         $.get('/regEmail', {email : email}, function(result){
             if(result.email == email){
-                $('#error').text('email already in use');
+                $('#error').text('Email already in use');
                 $('#email').css('background-color', '#e36363');
                 $("#register").prop('disabled', true);
             }
