@@ -38,6 +38,7 @@ app.get('/checkitemno', Admincontroller.getCheckItemNo);
 app.get('/addprod', Admincontroller.getAddProd);
 app.get('/editprod', Admincontroller.getEditProd);
 app.get('/delprod', Admincontroller.getDelProd);
+app.get('/deluser', Admincontroller.getDelUser);
 
 //Search
 app.get('/searchproducts', Searchcontroller.getCategory);

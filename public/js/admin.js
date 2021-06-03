@@ -99,5 +99,16 @@ $(document).ready(function () {
         console.log("Delete " + itemno);
     });
 
+    //delete profile
+    $('#userstable').on('click', '.deluser', function () {
+        var info = $(this).closest("tr").children(); //get row details
+        var email = $(info[3]).text(); //get itemno of current row
+        $(this).closest("tr").remove(); //remove row
+        
+        //call del function
+        $.get('/deluser', {email : email}, function(){});
+        console.log("Deleted user " + email);
+    });
+
    
 })

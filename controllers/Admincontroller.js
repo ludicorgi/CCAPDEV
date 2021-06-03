@@ -67,6 +67,10 @@ const Admincontroller = {
 
     getDelProd: function (req, res) {
         db.deleteOne(Products, req.query, function() {});
+    },
+
+    getDelUser: function(req, res){
+        db.deleteOne(Profile, req.query, function() {});
     }
 
 }

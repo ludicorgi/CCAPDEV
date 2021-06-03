@@ -110,12 +110,12 @@
                                     <th scope="col">Last Name</th>
                                     <th scope="col">Gender</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Password</th>
                                     <th scope="col">imgURL</th>
                                     <th scope="col">Card No</th>
                                     <th scope="col">sNo</th>
                                     <th scope="col">ExpDate</th>
                                     <th scope="col">address</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -125,12 +125,14 @@
                                     <td>{{ln}}</td>
                                     <td>{{gender}}</td>
                                     <td>{{email}}</td>
-                                    <td>{{password}}</td>
                                     <td>{{imgURL}}</td>
                                     <td>{{ccNo}}</td>
                                     <td>{{sNo}}</td>
                                     <td>{{ExpDate}}</td>
                                     <td>{{address}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm deluser">DEL</button>
+                                    </td>
                                 </tr>
                                 {{/each}}
                             </tbody>
