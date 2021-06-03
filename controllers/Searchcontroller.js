@@ -13,7 +13,7 @@ const Searchcontroller = {
         const key = req.query.tags;
         if(key){
             const pattern = new RegExp(key, 'i');
-            Products.find({tags:{$regex : pattern}}, function(err, results){
+            Products.find({$or:[{tags:{$regex : pattern}},{ name:{$regex : pattern}}]}, function(err, results){
                 res.render('search_prod', {products: results, title : key});
             });
         }
