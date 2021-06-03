@@ -8,6 +8,10 @@
     src: url(../fonts/Nexa\ Light.otf);
 }
 
+h1, label, p {
+    font-family: NexaBold;
+}
+
 .logo {
     height: 35px;
 }

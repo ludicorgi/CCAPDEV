@@ -6,6 +6,10 @@ const Shopcontroller = {
         res.render('my_cart');
     },
 
+    getCheckout: function(req, res){
+        res.render('checkout');
+    },
+
     getProduct: function(req, res){
         db.findOne(Products, req.query, null, function(result){
             res.render('view_product', result);
