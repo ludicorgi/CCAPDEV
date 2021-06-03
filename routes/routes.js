@@ -27,6 +27,7 @@ app.get('/logout', SignUpcontroller.Logout);
 
 //Shop
 app.get('/my_cart', Shopcontroller.getMyCart);
+app.get('/checkout', Shopcontroller.getCheckout);
 app.get('/view_product', Shopcontroller.getProduct);
 
 // Admin
