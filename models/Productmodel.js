@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var reviewSchema = new mongoose.Schema({
     rating: Number,
     user: String,
+    email: String,
     desc: String
 });
 
