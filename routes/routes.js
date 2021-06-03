@@ -29,6 +29,7 @@ app.get('/logout', SignUpcontroller.Logout);
 app.get('/my_cart', Shopcontroller.getMyCart);
 app.get('/view_product', Shopcontroller.getProduct);
 app.get('/comment', Shopcontroller.comment);
+app.get('/comdel', Shopcontroller.commentdelete);
 
 // Admin
 app.get('/admin', Admincontroller.getAdmin);
