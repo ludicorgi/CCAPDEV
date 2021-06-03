@@ -23,6 +23,10 @@ $(document).ready(function () {
                 let itemNo = params.get("itemNo");
 
                 $.get('/comment', {itemNo:itemNo, user:user, email: email, rating:rating, comment:comment}, function(){});
+
+                $('#rating').val("");
+                $('#comment').val("");
+                
                 setTimeout(function() {
                     location.reload();
                 }, 500);
