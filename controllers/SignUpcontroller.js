@@ -25,7 +25,7 @@ const SignUpcontroller = {
                         res.send(result);
                     }
                 });
-            }
+            } else res.send(undefined);
         });
     },
 
