@@ -48,6 +48,7 @@ const Shopcontroller = {
                 
                 if(user == req.query.user && email == req.query.email && rating == req.query.rating && desc == req.query.comment ){
                     db.updateOne(Products, {itemNo: itemNo},  { $pull:{reviews: {_id: id}} }, function(){});
+                    res.send("successful delete");
                 }
             });
         });

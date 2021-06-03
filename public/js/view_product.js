@@ -23,6 +23,9 @@ $(document).ready(function () {
                 let itemNo = params.get("itemNo");
 
                 $.get('/comment', {itemNo:itemNo, user:user, email: email, rating:rating, comment:comment}, function(){});
+                setTimeout(function() {
+                    location.reload();
+                }, 500);
             });
         }
     });
@@ -31,7 +34,6 @@ $(document).ready(function () {
         var user = $(this).siblings(".user").text();
         var rating = $(this).siblings("u").children(".rating").text();
         var comment = $(this).siblings(".desc").text();
-        $(this).closest('.review').remove();
         
         $.get('/session', {}, function(result){
             email = result.email;
@@ -39,7 +41,10 @@ $(document).ready(function () {
             let params = new URLSearchParams(document.location.search.substring(1));
             let itemNo = params.get("itemNo");
 
-            $.get('/comdel', {itemNo:itemNo, user:user, email: email, rating:rating, comment:comment}, function(){});
+            $.get('/comdel', {itemNo:itemNo, user:user, email: email, rating:rating, comment:comment}, function(result){
+                if(result == "successful delete") $(this).closest('.review').remove();
+                location.reload();
+            });
         });
     });
 });
