@@ -24,7 +24,6 @@ $(document).ready(function () {
             alert('Added to Cart Successfully');
             //TODO: get quantity of products added
             $.get('/addcart', {email : email, itemNo: itemNo, quantity:quantity}, function(result){
-                    
             });
         });
     });
