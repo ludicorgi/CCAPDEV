@@ -33,6 +33,7 @@ app.get('/logout', SignUpcontroller.Logout);
 app.get('/my_cart', Shopcontroller.getMyCart);
 app.get('/checkout', Shopcontroller.getCheckout);
 app.get('/view_product', Shopcontroller.getProduct);
+app.get('/emptycart', Shopcontroller.getEmptyCart);
 app.get('/comment', Shopcontroller.comment);
 app.get('/comdel', Shopcontroller.commentdelete);
 app.get('/addcart', Shopcontroller.addToCart);
