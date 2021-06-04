@@ -44,6 +44,7 @@ app.use(session({
 }));
 
 app.use((req, res, next) => {
+    // make session visible to all hbs pages
     res.locals.session = req.session;
     next();
 });

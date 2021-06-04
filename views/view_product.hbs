@@ -7,6 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/js/view_product.js"></script>
     <link rel="stylesheet" href="/css/product_profile_styles.css"/>
+	<link rel="stylesheet" href="/css/cart.css"/>
     <title>{{name}}</title>
 </head>
 <body>
@@ -91,7 +92,14 @@ Body Section
             <div class="coldiv flex-start">
                 <img class="productimg bordered" src="/img/{{imgURL}}"><br>
                 <hr class="line">
-                <button id="buy" class="buybutton">Add to Cart</button> P{{Price}} <br>
+                <button id="buy" class="buybutton" {{#unless session.email}}disabled{{/unless}}>Add to Cart</button><br>
+				<button onclick="decrement()" {{#unless session.email}}disabled{{/unless}}>-</button>
+				<input id="demoInput" type="number" value="1" min=0 max={{Quantity}} {{#unless session.email}}disabled{{/unless}}>
+				<button onclick="increment()" {{#unless session.email}}disabled{{/unless}}>+</button><br>
+				<p id="errorproduct" class="errorproduct"></p><br>
+				P{{Price}} <br>
+				In stock : {{Quantity}} <br>
+                <!--Rating : {{rating}}/5 <br>-->
 
                 <p class="bottomtext"><b>Tagged Under :</b>{{#each tags}} {{ this }} {{/each}}</p>
             </div>

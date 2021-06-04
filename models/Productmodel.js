@@ -20,6 +20,4 @@ var ProductSchema = new mongoose.Schema({
     reviews: [reviewSchema]
 });
 
-
-
 module.exports = mongoose.model('Products', ProductSchema);

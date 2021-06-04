@@ -265,7 +265,6 @@ h4 {
     text-transform: uppercase;
     float: left;
     width: auto;
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
     opacity: 0.8;
 }
 
@@ -296,7 +295,6 @@ h4 {
     float: left;
     width: auto;
     opacity: 0.8;
-    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
 }
 
 .carousel-caption p {
@@ -387,7 +385,7 @@ hr {
 }
 
 .row-fluid .thumbnails {
-    margin-left: 0;
+    margin-left: 28px;
 }
 
 .row-fluid [class*="span"]:first-child {
@@ -399,7 +397,7 @@ hr {
     float: left;
     min-height: 30px;
 	width: 100%;
-    margin-left: 2.127659574468085%;
+    margin-left: 0.12766%;
 	*margin-left: 2.074468085106383%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -441,6 +439,7 @@ li {
     display: block;
     padding: 4px;
     line-height: 20px;
+    min-height: 200px;
     border: 1px solid #ddd;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -461,6 +460,13 @@ li {
     position: relative;
 }
 
+.thumbnail .card{
+    min-height: 192px;
+    display: flex;
+    align-items: center;
+    top:50%;
+}
+
 .thumbnail>a {
     display: block;
     text-align: center;
@@ -468,8 +474,8 @@ li {
 
 .thumbnail img {
     max-width: 100%;
+    margin: 0;
 }
-
 /* end of products */
 
 /*login */
@@ -698,7 +704,6 @@ body {
 html {
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
-    ms-text-size-adjust: 100%;
 }
 
 .nav-img{
