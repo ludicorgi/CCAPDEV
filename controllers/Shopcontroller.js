@@ -97,7 +97,14 @@ const Shopcontroller = {
     },
 
     getCheckout: function(req, res){
-        res.render('checkout');
+        db.findOne(Profile, {email: req.session.email}, 'fn ln email address', function(result) {
+            res.render('checkout', {fn: result.fn, ln: result.fn, email: result.email, address: result.address});
+        });
+    },
+
+    getEmptyCart: function(req, res){
+        
+        db.updateOne(Profile, {email: req.query.email}, {$set : {cart: []}}, function(){});
     },
 
     getProduct: function(req, res){
