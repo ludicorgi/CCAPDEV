@@ -8,5 +8,9 @@ $(document).ready(function($) {
                 parent.remove();
             }
         });
+
+        setTimeout(function() {
+            window.location.assign('/my_cart');
+        }, 1000);
     });
 });
