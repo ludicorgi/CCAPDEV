@@ -30,6 +30,7 @@ const Shopcontroller = {
                         temp.Quantity = quantity
 
                         temp.total = temp.Quantity * temp.Price;
+                        temp.total.toFixed(2);
                         total += temp.total;
 
                         arr.push(temp);

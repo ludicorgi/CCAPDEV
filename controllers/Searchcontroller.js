@@ -14,7 +14,10 @@ const Searchcontroller = {
         if(key){
             const pattern = new RegExp(key, 'i');
             Products.find({$or:[{tags:{$regex : pattern}},{ name:{$regex : pattern}}]}, function(err, results){
-                res.render('search_prod', {products: results, title : key});
+                if(key == "")
+                    res.render('search_prod', {products: results, title : 'All Products'});
+                else
+                    res.render('search_prod', {products: results, title : key});
             });
         }
     },

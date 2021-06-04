@@ -21,8 +21,8 @@
           <div class = "welcome">Welcome!</div> 
           <a href="./"> Home</a> 
           <a id="about" class="active" href=""> About</a>
-          <a id="edit_profile" href="edit_profile">My Account</a> 
-          <a id="my_cart" href="my_cart">My Cart</a>
+          {{#if session.email}}<a  id="edit_profile" href="edit_profile">My Account</a> {{/if}}
+          {{#if session.email}}<a id="my_cart" href="my_cart">My Cart</a>{{/if}}
           <a id="register" href="register">Register </a> 
           <a id="login" href="login">Login</a>
         </div>

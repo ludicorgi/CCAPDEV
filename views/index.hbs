@@ -25,8 +25,8 @@
 				<div class = "welcome">Welcome!</div> 
 				<a class="active" href=""> Home</a> 
 				<a id="about" href="about"> About</a>
-				<a id="edit_profile" href="edit_profile" {{#unless session.email}}disabled{{/unless}}>My Account</a> 
-				<a id="my_cart" href="my_cart" {{#unless session.email}}disabled{{/unless}}>My Cart</a>
+				{{#if session.email}}<a  id="edit_profile" href="edit_profile">My Account</a> {{/if}}
+				{{#if session.email}}<a id="my_cart" href="my_cart">My Cart</a>{{/if}}
 				<a id="register" href="register">Register </a> 
 				<a id="login" href="login">Login</a>
 			</div>
@@ -89,7 +89,7 @@ Body Section
 		<div class="slideshow-container">
 			  <!-- Full-width images with number and caption text -->
 			  <div class="mySlides fade">
-				<a href="product1.html"><img src="/img/switch.jpg" style="width:100%"></a>
+				<a><img src="/img/switch.jpg" style="width:100%"></a>
                 <div class="slide-caption">
                       <h4>Enjoy low prices at minimal cost!</h4>
                       <p><span>Very easy to use</span></p>
@@ -97,7 +97,7 @@ Body Section
 			  </div>
 
 			  <div class="mySlides fade">
-				<a href="product2.html"><img src="/img/underwear.jpg" style="width:100%"></a>
+				<a><img src="/img/underwear.jpg" style="width:100%"></a>
                 <div class="slide-caption">
                       <h4>Many Categories to choose from!</h4>
                       <p><span>Very amazing!</span></p>
@@ -105,7 +105,7 @@ Body Section
 			  </div>
 
 			  <div class="mySlides fade">
-				<a href="product3.html"><img src="/img/pingpong.jpg" href="product3.html" style="width:100%"></a>
+				<a><img src="/img/pingpong.jpg" style="width:100%"></a>
                 <div class="slide-caption">
                       <h4>Enjoy the biggest discounts!</h4>
                       <p><span>Very affordable!</span></p>
@@ -113,7 +113,7 @@ Body Section
 			  </div>
 			  
 			  <div class="mySlides fade">
-				<a href="product4.html"><img src="/img/sofa.jpg" href="product4.html" style="width:100%"></a>
+				<a><img src="/img/sofa.jpg" style="width:100%"></a>
                 <div class="slide-caption">
                       <h4>Enjoy our extended warranties!</h4>
                       <p><span>Very easy to return!</span></p>
@@ -121,7 +121,7 @@ Body Section
 			  </div>
 			  
 			  <div class="mySlides fade">
-				<a href="product5.html"><img src="/img/lipstick.jpg" href="product5.html" style="width:100%"></a>
+				<a><img src="/img/lipstick.jpg" style="width:100%"></a>
                 <div class="slide-caption">
                       <h4>Enjoy our amazing website!</h4>
                       <p><span>Very good for the eyes!</span></p>
@@ -147,34 +147,22 @@ Body Section
 New Products
 -->
 	<div class="well well-small">
-	<h3>New Products </h3>
+	<h3>Featured Products </h3>
 	<hr class="soften"/>
 	<div class ="row-fluid">
 	  <ul class="thumbnails">
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="view_product"><img src="/img/jacket.jpg" alt="jacket"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="view_product"><img src="/img/lotus.jpg" alt="lotus"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="view_product"><img src="/img/shorts.jpg" alt="shorts"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="view_product"><img src="/img/penguin.jpg" alt="penguin"></a>
-		</div>
-		</li>
+		{{#each products}}
+			<li class="span3">
+			<div class="thumbnail" style="margin-bottom: 30px;">
+				<a href="#" class="tag"></a>
+				<a href="/view_product?itemNo={{itemNo}}" class = "card"><img src="/img/{{imgURL}}" alt={{name}}></a>
+				<p style="text-align: center;">{{name}}<br> P{{Price}}<br></p>
+				<a href="/view_product?itemNo={{itemNo}}" id = "buy">View Details</a>
+			</div>
+			</li>
+			{{else}}
+				<h1 style="text-align: center">Oops! No items found!</h1>
+		{{/each}}
 	  </ul>
 	  </div>
 	</div>
@@ -188,30 +176,18 @@ Popular Products
 	<hr class="soften"/>
 	<div class ="row-fluid">
 	  <ul class="thumbnails">
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="product2.html"><img src="/img/jacket.jpg" alt="jacket"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="product5.html"><img src="/img/lotus.jpg" alt="lotus"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="product3.html"><img src="/img/shorts.jpg" alt="shorts"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="product4.html"><img src="/img/penguin.jpg" alt="penguin"></a>
-		</div>
-		</li>
+		{{#each products}}
+			<li class="span3">
+			<div class="thumbnail" style="margin-bottom: 30px;">
+				<a href="#" class="tag"></a>
+				<a href="/view_product?itemNo={{itemNo}}" class = "card"><img src="/img/{{imgURL}}" alt={{name}}></a>
+				<p style="text-align: center;">{{name}}<br> P{{Price}}<br></p>
+				<a href="/view_product?itemNo={{itemNo}}" id = "buy">View Details</a>
+			</div>
+			</li>
+			{{else}}
+				<h1 style="text-align: center">Oops! No items found!</h1>
+		{{/each}}
 	  </ul>
 	  </div>
 	</div>
@@ -220,34 +196,22 @@ Popular Products
 Best Selling Products
 -->
 	<div class="well well-small">
-	<h3>New Products </h3>
+	<h3>Best Selling Products </h3>
 	<hr class="soften"/>
 	<div class ="row-fluid">
 	  <ul class="thumbnails">
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="product2.html"><img src="/img/jacket.jpg" alt="jacket"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="product5.html"><img src="/img/lotus.jpg" alt="lotus"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="product3.html"><img src="/img/shorts.jpg" alt="shorts"></a>
-		</div>
-		</li>
-		<li class="span3">
-		<div class="thumbnail">
-			<a href="#" class="tag"></a>
-			<a href="product4.html"><img src="/img/penguin.jpg" alt="penguin"></a>
-		</div>
-		</li>
+		{{#each products}}
+			<li class="span3">
+			<div class="thumbnail" style="margin-bottom: 30px;">
+				<a href="#" class="tag"></a>
+				<a href="/view_product?itemNo={{itemNo}}" class = "card"><img src="/img/{{imgURL}}" alt={{name}}></a>
+				<p style="text-align: center;">{{name}}<br> P{{Price}}<br></p>
+				<a href="/view_product?itemNo={{itemNo}}" id = "buy">View Details</a>
+			</div>
+			</li>
+			{{else}}
+				<h1 style="text-align: center">Oops! No items found!</h1>
+		{{/each}}
 	  </ul>
 	  </div>
 	</div>

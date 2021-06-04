@@ -50,7 +50,7 @@
                             <th scope="row"></th>
                             <td><a href="/view_product?itemNo={{itemNo}}">{{name}}</a></td>
                             <td>{{Quantity}}</td>
-                            <td>{{total}}</td>
+                            <td>P{{total}}</td>
                             <td><button class="delete">X</button></td>
                         </tr>
                         {{/each}}
@@ -60,13 +60,13 @@
                             <th scope="row">Total:</th>
                             <td></td>
                             <td></td>
-                            <td>{{total}}</td>
+                            <td>P{{total}}</td>
                         </tr>
                     </tfoot>
                 </table>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     
-                    <a class="btn btn-secondary me-md-2" role="button" href="./">Close</a>
+                    <a class="btn btn-secondary me-md-2" role="button" href="index.html">Close</a>
                     <a class="btn btn-primary" role="button" id="checkout" href="checkout">Checkout</a>
                 </div>
             </div>
