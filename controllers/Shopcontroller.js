@@ -98,7 +98,7 @@ const Shopcontroller = {
 
     getCheckout: function(req, res){
         db.findOne(Profile, {email: req.session.email}, 'fn ln email address', function(result) {
-            res.render('checkout', {fn: result.fn, ln: result.fn, email: result.email, address: result.address});
+            res.render('checkout', {fn: result.fn, ln: result.ln, email: result.email, address: result.address});
         });
     },
 
