@@ -50,7 +50,7 @@
                             <th scope="row"></th>
                             <td><a href="/view_product?itemNo={{itemNo}}">{{name}}</a></td>
                             <td>{{Quantity}}</td>
-                            <td>{{total}}</td>
+                            <td>P{{total}}</td>
                             <td><button class="delete">X</button></td>
                         </tr>
                         {{/each}}
@@ -60,13 +60,13 @@
                             <th scope="row">Total:</th>
                             <td></td>
                             <td></td>
-                            <td>{{total}}</td>
+                            <td>P{{total}}</td>
                         </tr>
                     </tfoot>
                 </table>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     
-                    <a class="btn btn-secondary me-md-2" role="button" href="./">Close</a>
+                    <a class="btn btn-secondary me-md-2" role="button" href="index.html">Close</a>
                     <a class="btn btn-primary" role="button" id="checkout" href="checkout">Checkout</a>
                 </div>
             </div>
@@ -75,7 +75,7 @@
     </div>
 
     {{!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/cart.js"></script>
 </body>

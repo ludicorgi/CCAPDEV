@@ -21,13 +21,10 @@ $(document).ready(function () {
             let params = new URLSearchParams(document.location.search.substring(1));
             let itemNo = params.get("itemNo");
             let quantity = $('#demoInput').val();
+            alert('Added to Cart Successfully');
             //TODO: get quantity of products added
             $.get('/addcart', {email : email, itemNo: itemNo, quantity:quantity}, function(result){
-                console.log(result);
-                if(result){
-                    console.log('dwdwede');
-                }
-                    $('#errorproduct').text('Added to Cart Successfully');
+                    
             });
         });
     });

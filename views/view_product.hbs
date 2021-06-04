@@ -24,8 +24,8 @@
 			</form>
 				<div class = "welcome">Welcome!</div> 
 				<a href="./"> Home</a> 
-				<a href="edit_profile">My Account</a> 
-				<a href="my_cart">My Cart</a>
+				{{#if session.email}}<a  id="edit_profile" href="edit_profile">My Account</a> {{/if}}
+				{{#if session.email}}<a id="my_cart" href="my_cart">My Cart</a>{{/if}}
 				<a href="register">Register </a> 
 				<a href="login"> Login</a>
 			</div>
@@ -92,11 +92,10 @@ Body Section
             <div class="coldiv flex-start">
                 <img class="productimg bordered" src="/img/{{imgURL}}"><br>
                 <hr class="line">
-                <button id="buy" class="buybutton" {{#unless session.email}}disabled{{/unless}}>Add to Cart</button><br>
+                <button id="buy" class="buybutton" style="text-decoration: none;" {{#unless session.email}}disabled{{/unless}}>Add to Cart</button><br>
 				<button onclick="decrement()" {{#unless session.email}}disabled{{/unless}}>-</button>
 				<input id="demoInput" type="number" value="1" min=0 max={{Quantity}} {{#unless session.email}}disabled{{/unless}}>
 				<button onclick="increment()" {{#unless session.email}}disabled{{/unless}}>+</button><br>
-				<p id="errorproduct" class="errorproduct"></p><br>
 				P{{Price}} <br>
 				In stock : {{Quantity}} <br>
                 <!--Rating : {{rating}}/5 <br>-->
