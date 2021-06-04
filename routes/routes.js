@@ -8,6 +8,10 @@ const Searchcontroller = require("../controllers/Searchcontroller.js");
 
 const app = express();
 
+// middleware
+app.get(['/edit_profile', '/my_cart'], controller.verifyUser);
+
+
 // index
 app.get(`/`, controller.getIndex);
 app.get('/about', controller.getAbout);
@@ -31,6 +35,8 @@ app.get('/checkout', Shopcontroller.getCheckout);
 app.get('/view_product', Shopcontroller.getProduct);
 app.get('/comment', Shopcontroller.comment);
 app.get('/comdel', Shopcontroller.commentdelete);
+app.get('/addcart', Shopcontroller.addToCart);
+app.post('/deletecart', Shopcontroller.deleteCart);
 
 // Admin
 app.get('/admin', Admincontroller.getAdmin);

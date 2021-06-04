@@ -1,8 +1,34 @@
+function increment() {
+    document.getElementById('demoInput').stepUp();
+ }
+ function decrement() {
+    document.getElementById('demoInput').stepDown();
+ }
+
 $(document).ready(function () {
+
+    $('#demoInput').keyup(function(){
+        var max = parseInt(document.getElementById("demoInput").max);
+        if ($(this).val() > max){
+           $(this).val(max);
+        }
+     });
 
     $('#buy').click(function(){
         $.get('/session', {}, function(result){
-            
+            var email = result.email;
+            console.log(result.email);
+            let params = new URLSearchParams(document.location.search.substring(1));
+            let itemNo = params.get("itemNo");
+            let quantity = $('#demoInput').val();
+            //TODO: get quantity of products added
+            $.get('/addcart', {email : email, itemNo: itemNo, quantity:quantity}, function(result){
+                console.log(result);
+                if(result){
+                    console.log('dwdwede');
+                }
+                    $('#errorproduct').text('Added to Cart Successfully');
+            });
         });
     });
 
